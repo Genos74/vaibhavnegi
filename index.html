@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibhav Negi — Game Designer & Artist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: system-ui, sans-serif; }
+    .card-hover { transition: all 0.3s; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3); }
+    .modal { animation: fadeIn 0.3s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold tracking-tighter">VAIBHAV NEGI</a>
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="#current" class="hover:text-emerald-400 transition">Current Project</a>
+        <a href="#artstation" class="hover:text-emerald-400 transition">ArtStation Works</a>
+        <a href="#games" class="hover:text-emerald-400 transition">Playable Games</a>
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-950 to-black pt-16">
+    <div class="text-center max-w-3xl px-6">
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-4">Vaibhav Negi</h1>
+      <p class="text-3xl text-emerald-400 mb-8">Game Designer & Concept Artist</p>
+      <p class="text-xl text-zinc-400 mb-12">Bringing worlds to life through art and gameplay</p>
+      <a href="#current" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-black font-semibold px-10 py-4 rounded-full text-lg transition">Explore My Work</a>
+      <a href="https://vaibhav_negi.artstation.com/" target="_blank" class="ml-4 inline-block border border-zinc-500 hover:border-zinc-300 px-10 py-4 rounded-full text-lg transition">View on ArtStation</a>
+    </div>
+  </header>
+
+  <!-- CURRENT PROJECT -->
+  <section id="current" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-5xl font-bold mb-12 text-center">Currently Working On</h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- EDIT THIS SECTION -->
+      <div>
+        <h3 class="text-4xl font-bold mb-4">Project Title Here</h3>
+        <p class="text-zinc-400 text-lg leading-relaxed mb-8">
+          Short description of your current game. What genre, engine, role, etc. (replace this text).
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="bg-white text-black px-8 py-3 rounded-full font-medium">Learn More</a>
+          <a href="https://youtube.com" target="_blank" class="border border-zinc-500 px-8 py-3 rounded-full flex items-center gap-2">
+            <i class="fa-brands fa-youtube"></i> Watch Trailer
+          </a>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <!-- Replace these image URLs with your own screenshots (upload to GitHub repo or imgur) -->
+        <img src="https://picsum.photos/id/1015/800/450" alt="Screenshot 1" class="rounded-xl shadow-2xl">
+        <img src="https://picsum.photos/id/201/800/450" alt="Screenshot 2" class="rounded-xl shadow-2xl">
+      </div>
+    </div>
+    <!-- YouTube Trailer (replace VIDEO_ID) -->
+    <div class="mt-12 aspect-video bg-black rounded-2xl overflow-hidden">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- ARTSTATION PROJECTS (auto-pulled) -->
+  <section id="artstation" class="bg-zinc-900 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-4 text-center">ArtStation Projects</h2>
+      <p class="text-center text-zinc-400 mb-12">Character Design • Game Design • Concept Art — pulled live from ArtStation</p>
+      <div id="artstation-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYABLE GAMES / COMPLETED PROJECTS WITH DOWNLOAD -->
+  <section id="games" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-5xl font-bold mb-12 text-center">Playable Games & Completed Projects</h2>
+    <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Populated by JavaScript - edit the array below -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-zinc-900 py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold mb-8">About Me</h2>
+      <p class="text-xl text-zinc-400 leading-relaxed">
+        Write your bio here (replace this paragraph). Game design student / professional with passion for storytelling, mechanics, and beautiful visuals.
+      </p>
+      <a href="mailto:your@email.com" class="mt-10 inline-block border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-black px-10 py-4 rounded-full text-lg font-medium">Get in Touch</a>
+    </div>
+  </section>
+
+  <footer class="border-t border-zinc-800 py-12 text-center text-zinc-500 text-sm">
+    © Vaibhav Negi • Built with ❤️ • Live data from ArtStation
+  </footer>
+
+  <!-- MODAL for ArtStation projects -->
+  <div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50 modal">
+    <div class="bg-zinc-900 max-w-3xl w-full mx-4 rounded-3xl overflow-hidden">
+      <div class="p-8" id="modal-content">
+        <!-- Filled by JS -->
+      </div>
+      <div class="border-t border-zinc-800 p-4 text-right">
+        <button onclick="closeModal()" class="px-8 py-3 text-zinc-400 hover:text-white">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // === CONFIGURATION - EDIT THESE ===
+    const ARTSTATION_USER_ID = "YOUR_USER_ID_HERE";   // ← Replace with the number you found
+
+    // Custom playable games (add as many as you want)
+    const playableGames = [
+      {
+        title: "Your Game Name",
+        desc: "Short description. Genre, engine, your role.",
+        cover: "https://picsum.photos/id/1016/600/400",
+        youtubeId: "VIDEO_ID_HERE",           // e.g. dQw4w9wg
+        downloadLink: "https://itch.io/your-game",   // direct download or itch.io page
+        screenshots: ["https://picsum.photos/id/1018/800/450", "https://picsum.photos/id/102/800/450"]
+      }
+      // Add more objects here if you have multiple games
+    ];
+
+    // === TAILWIND INIT ===
+    tailwind.config = { content: [], theme: { extend: {} } };
+
+    // === LOAD ARTSTATION PROJECTS ===
+    async function loadArtstationProjects() {
+      const grid = document.getElementById('artstation-grid');
+      grid.innerHTML = '<p class="col-span-full text-center text-zinc-400">Loading your ArtStation projects...</p>';
+
+      try {
+        const apiUrl = `https://www.artstation.com/api/v2/users/${ARTSTATION_USER_ID}/projects.json?page=1`;
+        const proxied = `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`;
+        const res = await fetch(proxied);
+        const json = await res.json();
+        const projects = json.data || [];
+
+        grid.innerHTML = '';
+        projects.forEach(proj => {
+          const card = document.createElement('div');
+          card.className = 'bg-zinc-800 rounded-2xl overflow-hidden card-hover cursor-pointer';
+          card.innerHTML = `
+            <img src="${proj.cover_url || 'https://picsum.photos/600/400'}" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h4 class="font-semibold text-xl">${proj.title}</h4>
+              <p class="text-zinc-400 text-sm line-clamp-2 mt-2">${proj.description ? proj.description.replace(/<[^>]+>/g, '') : ''}</p>
+              <div class="mt-4 flex gap-3">
+                <button onclick="openProjectModal(${JSON.stringify(proj)})" class="flex-1 bg-zinc-700 hover:bg-zinc-600 py-2 rounded-xl text-sm">View Details</button>
+                <a href="${proj.url}" target="_blank" class="flex-1 text-center border border-zinc-600 hover:border-zinc-400 py-2 rounded-xl text-sm">Open on ArtStation</a>
+              </div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+
+      } catch(e) {
+        grid.innerHTML = '<p class="col-span-full text-red-400 text-center">Could not load ArtStation (check your User ID). Refresh page after updating ID.</p>';
+      }
+    }
+
+    // === RENDER PLAYABLE GAMES ===
+    function renderPlayableGames() {
+      const grid = document.getElementById('games-grid');
+      grid.innerHTML = '';
+
+      playableGames.forEach(game => {
+        const card = document.createElement('div');
+        card.className = 'bg-zinc-800 rounded-2xl overflow-hidden card-hover';
+        card.innerHTML = `
+          <img src="${game.cover}" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h4 class="font-semibold text-2xl">${game.title}</h4>
+            <p class="text-zinc-400 mt-3">${game.desc}</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="${game.downloadLink}" target="_blank" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-black font-medium py-3 rounded-2xl text-center">Download & Try</a>
+              <button onclick="showGameTrailer('${game.youtubeId}')" class="flex-1 border border-zinc-600 hover:border-emerald-400 py-3 rounded-2xl">Watch Trailer</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Simple trailer modal
+    function showGameTrailer(id) {
+      const modalHTML = `
+        <div class="aspect-video">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      `;
+      document.getElementById('modal-content').innerHTML = modalHTML;
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function openProjectModal(proj) {
+      const html = `
+        <h3 class="text-3xl font-bold mb-6">${proj.title}</h3>
+        <img src="${proj.cover_url}" class="w-full rounded-xl mb-8">
+        <div class="prose prose-invert max-w-none">${proj.description || 'No description available.'}</div>
+        <p class="text-xs text-zinc-500 mt-8">Published: ${proj.published_at ? new Date(proj.published_at).toLocaleDateString() : ''}</p>
+      `;
+      document.getElementById('modal-content').innerHTML = html;
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+
+    // === START ===
+    window.onload = () => {
+      loadArtstationProjects();
+      renderPlayableGames();
+    };
+  </script>
+</body>
+</html>
