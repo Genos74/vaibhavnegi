@@ -16,78 +16,185 @@
 </head>
 <body class="bg-gradient-to-b from-zinc-950 to-black text-zinc-100 min-h-screen">
 
-  <!-- [Navbar, Hero, Current Project, About, Footer sections remain exactly the same as your previous code - I'm only showing the changed parts for brevity] -->
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold tracking-tight">VAIBHAV NEGI</a>
+      <div class="hidden md:flex gap-8 font-medium">
+        <a href="#current" class="hover:text-emerald-400 transition">Current</a>
+        <a href="#artstation" class="hover:text-emerald-400 transition">ArtStation</a>
+        <a href="#games" class="hover:text-emerald-400 transition">Games</a>
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+      </div>
+    </div>
+  </nav>
 
-  <!-- ArtStation Works section (only this part changes) -->
+  <!-- Hero -->
+  <header class="pt-28 pb-20 md:pt-40 md:pb-32 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Vaibhav Negi</h1>
+      <p class="text-2xl md:text-4xl text-emerald-400 mb-6">Game Design Student & Concept Artist</p>
+      <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10">3rd year game design student from Dehradun, India — passionate about characters, worlds, and gameplay.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#current" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-full transition">See Current Work</a>
+        <a href="https://www.artstation.com/vaibhav_negi" target="_blank" class="border border-zinc-600 hover:border-zinc-400 px-8 py-4 rounded-full transition">ArtStation Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Current Project (edit here) -->
+  <section id="current" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Current Project</h2>
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <h3 class="text-3xl font-bold mb-6">[Your Current Game Title Here]</h3>
+        <p class="text-zinc-300 leading-relaxed mb-8 text-lg">
+          [Add description: genre, engine, your role, features, status...]
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="[link to demo/itch/devlog]" class="bg-white text-black px-7 py-3 rounded-full font-medium hover:bg-gray-200 transition">Play Demo</a>
+          <a href="https://www.youtube.com/watch?v=[VIDEO_ID]" target="_blank" class="border border-zinc-600 hover:border-emerald-400 px-7 py-3 rounded-full flex items-center gap-2 transition">
+            <i class="fab fa-youtube text-red-500"></i> Trailer
+          </a>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <img src="https://via.placeholder.com/800x450?text=Screenshot+1" alt="Screenshot 1" class="rounded-2xl shadow-2xl w-full">
+        <img src="https://via.placeholder.com/800x450?text=Screenshot+2" alt="Screenshot 2" class="rounded-2xl shadow-2xl w-full">
+      </div>
+    </div>
+    <div class="mt-16 aspect-video rounded-2xl overflow-hidden border border-zinc-800">
+      <iframe class="w-full h-full" src="https://www.youtube.com/embed/[VIDEO_ID]" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- ArtStation Works - STATIC now (more items, no fetch error) -->
   <section id="artstation" class="bg-zinc-900/50 py-20">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">ArtStation Works</h2>
-      <p class="text-center text-zinc-400 mb-12">Character concepts, illustrations & game art — loaded live via proxy</p>
-      <div id="artstation-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <p class="col-span-full text-center text-zinc-500 py-10">Loading ArtStation projects… (via proxy)</p>
+      <p class="text-center text-zinc-400 mb-12">My 6 latest character concepts, illustrations & game art</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Static Card 1 - Replace title, image URL, desc with your real ones -->
+        <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer">
+          <img src="https://via.placeholder.com/600x800?text=Artwork+1" alt="Artwork 1" class="w-full h-80 object-cover">
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Character Concept 1</h4>
+            <p class="text-zinc-400 text-sm mb-4 line-clamp-3">Line art warrior girl with armor and swords. Detailed fantasy design.</p>
+            <div class="flex gap-3">
+              <a href="https://www.artstation.com/artwork/[your-artwork-slug-1]" target="_blank" class="flex-1 text-center bg-zinc-800 hover:bg-zinc-700 py-2 rounded-xl text-sm">View on ArtStation</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Static Card 2 -->
+        <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer">
+          <img src="https://via.placeholder.com/600x800?text=Artwork+2" alt="Artwork 2" class="w-full h-80 object-cover">
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Fantasy Character 2</h4>
+            <p class="text-zinc-400 text-sm mb-4 line-clamp-3">Dark hooded figure with dramatic lighting and cloak details.</p>
+            <div class="flex gap-3">
+              <a href="https://www.artstation.com/artwork/[your-artwork-slug-2]" target="_blank" class="flex-1 text-center bg-zinc-800 hover:bg-zinc-700 py-2 rounded-xl text-sm">View on ArtStation</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Cards 3–6 similarly -->
+        <!-- Example Card 3 -->
+        <div class="card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer">
+          <img src="https://via.placeholder.com/600x800?text=Artwork+3" alt="Artwork 3" class="w-full h-80 object-cover">
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Game Asset Design</h4>
+            <p class="text-zinc-400 text-sm mb-4 line-clamp-3">Environment or prop concept for a game level.</p>
+            <div class="flex gap-3">
+              <a href="https://www.artstation.com/artwork/[slug-3]" target="_blank" class="flex-1 text-center bg-zinc-800 hover:bg-zinc-700 py-2 rounded-xl text-sm">View on ArtStation</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat for 4,5,6 - copy-paste and change content -->
+
       </div>
     </div>
   </section>
 
-  <!-- [Rest of HTML same - modal, etc.] -->
+  <!-- Playable Games (edit array in script below) -->
+  <section id="games" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Playable Games & Completed Projects</h2>
+    <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-zinc-900/50 py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-10">About Me</h2>
+      <p class="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl mx-auto">
+        Game design student (3rd year) based in Dehradun, India.<br>
+        Passionate about character design, world-building, mechanics.<br>
+        Tools: Unity, Photoshop, Blender, etc.<br><br>
+        Open to collabs, feedback, opportunities!
+      </p>
+      <a href="mailto:your.email@gmail.com" class="mt-10 inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-10 py-4 rounded-full transition">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-800 py-12 text-center text-zinc-500 text-sm">
+    © 2026 Vaibhav Negi • Portfolio • ArtStation static showcase
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+    <div class="bg-zinc-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-8" id="modal-content"></div>
+      <div class="border-t border-zinc-800 p-6 text-right">
+        <button onclick="document.getElementById('modal').classList.add('hidden')" class="px-8 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-full transition">Close</button>
+      </div>
+    </div>
+  </div>
 
   <script>
-    // === CONFIG AREA ===
-    const ARTSTATION_USERNAME = "vaibhav_negi";
+    // === PLAYABLE GAMES - EDIT THIS ARRAY ===
+    const playableGames = [
+      {
+        title: "Your Game 1",
+        description: "Description here. Genre, engine, role...",
+        coverImage: "https://via.placeholder.com/600x400?text=Game+1",
+        downloadUrl: "https://your-download-link.com",
+        youtubeId: "" // optional trailer ID
+      },
+      // Add more...
+    ];
 
-    // Your playableGames array (keep as-is or edit)
-
-    // === ARTSTATION FETCH WITH BETTER PROXY ===
-    async function loadArtstation() {
-      const grid = document.getElementById("artstation-grid");
-      grid.innerHTML = '<p class="col-span-full text-center text-zinc-500 py-10">Loading your ArtStation artwork via proxy…</p>';
-
-      try {
-        const originalUrl = `https://www.artstation.com/api/v2/users/${ARTSTATION_USERNAME}/projects.json?page=1&per_page=20`;
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(originalUrl)}`;
-
-        const response = await fetch(proxyUrl);
-
-        if (!response.ok) throw new Error(`Proxy status: ${response.status}`);
-
-        const data = await response.json();
-        const projects = data.data || [];
-
-        grid.innerHTML = "";
-        if (projects.length === 0) {
-          grid.innerHTML = '<p class="col-span-full text-center text-amber-400 py-10">No projects loaded — profile might be empty or restricted.</p>';
-          return;
-        }
-
-        projects.forEach(p => {
-          const cover = p.cover_url || p.small_square_url || "https://via.placeholder.com/600";
-          const desc = (p.description || "").replace(/<[^>]*>/g, "").substring(0, 140) + ((p.description || "").length > 140 ? "..." : "");
-          const card = document.createElement("div");
-          card.className = "card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer";
-          card.innerHTML = `
-            <img src="${cover}" alt="${p.title}" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-2">${p.title}</h4>
-              <p class="text-zinc-400 text-sm mb-4 line-clamp-3">${desc}</p>
-              <div class="flex gap-3">
-                <button class="flex-1 bg-zinc-800 hover:bg-zinc-700 py-2 rounded-xl text-sm" onclick='openModal(\`${JSON.stringify(p).replace(/`/g,"\\`")}\`)'>Details</button>
-                <a href="${p.url}" target="_blank" class="flex-1 text-center border border-zinc-700 hover:border-zinc-500 py-2 rounded-xl text-sm">ArtStation →</a>
-              </div>
+    // Render games
+    function renderGames() {
+      const grid = document.getElementById("games-grid");
+      grid.innerHTML = "";
+      playableGames.forEach(g => {
+        const card = document.createElement("div");
+        card.className = "card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800";
+        card.innerHTML = `
+          <img src="${g.coverImage}" alt="${g.title}" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h4 class="text-2xl font-semibold mb-3">${g.title}</h4>
+            <p class="text-zinc-400 mb-6">${g.description}</p>
+            <div class="flex flex-wrap gap-3">
+              ${g.downloadUrl ? `<a href="${g.downloadUrl}" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl text-center font-medium">Download & Play</a>` : ""}
+              ${g.youtubeId ? `<button onclick="openTrailer('${g.youtubeId}')" class="flex-1 border border-zinc-700 hover:border-emerald-400 py-3 rounded-xl">Trailer</button>` : ""}
             </div>
-          `;
-          grid.appendChild(card);
-        });
-      } catch (err) {
-        grid.innerHTML = `<p class="col-span-full text-red-400 text-center py-10">Still couldn't load ArtStation.<br>Error: ${err.message}<br><br>Try: Refresh page, use incognito mode, or disable ad-blockers/extensions.<br>If persists, ArtStation may have tightened restrictions — we can fallback to manual embeds.</p>`;
-      }
+          </div>
+        `;
+        grid.appendChild(card);
+      });
     }
 
-    // [Rest of script: renderGames, openTrailer, openModal functions same as before]
+    function openTrailer(id) {
+      document.getElementById("modal-content").innerHTML = `<div class="aspect-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe></div>`;
+      document.getElementById("modal").classList.remove("hidden");
+    }
 
-    window.addEventListener("load", () => {
-      loadArtstation();
-      renderGames();
-    });
+    // Load on page ready
+    window.addEventListener("load", renderGames);
   </script>
 </body>
 </html>
